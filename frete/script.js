@@ -1,18 +1,16 @@
 let valor = Number (prompt("Insira o valor da sua compra:"))
-let regiao = Number (prompt("Qual a sua região? (1-Sudeste; 2-Sul; 3-Outros)"))
-let frete
-let resultado = Number (valor + frete)
+let regiao =  (prompt("Qual a sua região? (1-Sudeste; 2-Sul; 3-Outros)"))
 
 if (valor > 250){
-    frete = 0
     alert ("Você ganhou frete grátis!")
-    alert (`Valor a pagar: ${valor}`)
+    alert (`Valor a pagar: R$${valor}`)
 } else{
 if (regiao === "1"){
-frete = 10
-}else if (regiao === "2"){
-    frete = 20
-}else 
-    frete = 30
+    alert (`O frete é R$10,00! Valor a pagar: R$${valor + 10}`)
 }
-alert (`Resumo da compra: ${valor} + ${frete} = ${resultado}`) 
+else if (regiao === "2"){
+    alert (`O frete é R$20,00! Valor a pagar: R$${valor + 20}`)
+}
+else if (regiao === "3"){
+    alert (`O frete é R$30,00! Valor a pagar: R$${valor + 30}`)
+}}
